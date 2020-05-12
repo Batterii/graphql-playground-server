@@ -18,13 +18,13 @@ always available at some port number on `localhost` url.
 
 For now, though, the easiest way to use it is to install it globally with npm:
 
-```
+```sh
 npm i -g graphql-playground-server
 ```
 
 Then run it in your console from anywhere on your system like so:
 
-```
+```sh
 graphql-playground-server
 ```
 
@@ -36,13 +36,37 @@ using the address bar in the playground itself if you'd like (see below).
 
 ## Configuration
 If you'd like to to change the port number of the playground server, or its
-default GraphQL endpoint url, you can do so by setting environment variables.
-`GRAPHQL_PLAYGROUND_PORT` will set the port, and `GRAPHQL_PLAYGROUND_ENDPOINT`
-will set the endpoint:
+default GraphQL endpoint url, you have a few ways of doing so.
+
+You can provide them as command-line arguments:
+
+```sh
+graphql-playground-server --port 3002 --endpoint https://your.host/graphql
+```
+
+
+Create a yaml config file provide a path to it as a command line argument:
+
+**graphql-playground-server.conf.yaml**
+```yaml
+port: 3002
+endpoint: https://your.host/graphql
+```
+
+```sh
+graphql-playground-server --config  graphql-playground-server.conf.yaml
+```
+
+
+Provide environment variables:
 
 ```sh
 GRAPHQL_PLAYGROUND_PORT=3002 GRAPHQL_PLAYGROUND_ENDPOINT=https://your.host/graphql graphql-playground-server
 ```
+
+Or any combination of the above. If you provide the same configuration option
+in multiple ways, they will be prioritized like so: CLI args, config file
+values, environment variables.
 
 
 [1]: https://github.com/prisma-labs/graphql-playground
