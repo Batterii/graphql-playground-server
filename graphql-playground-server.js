@@ -15,4 +15,6 @@ const endpoint = process.env.GRAPHQL_PLAYGROUND_ENDPOINT ||
 
 const app = new Koa();
 app.use(playground({ endpoint }));
-app.listen(port);
+app.listen(port, () => {
+	console.log(`Serving playground at http://localhost:${port}`);
+});
