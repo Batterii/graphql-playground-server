@@ -9,7 +9,7 @@
 		"graphql-playground-server.js"
 	],
 	"bin": {
-		"graphql-playground-server": "graphql-playground.server.js"
+		"graphql-playground-server": "graphql-playground-server.js"
 	},
 	"dependencies": {
 		"graphql-playground-middleware-koa": "^1.6.13",
