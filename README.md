@@ -41,9 +41,7 @@ default GraphQL endpoint url, you can do so by setting environment variables.
 will set the endpoint:
 
 ```sh
-GRAPHQL_PLAYGROUND_PORT=3002
-GRAPHQL_PLAYGROUND_ENDPOINT=https://your.host/graphql
-graphql-playground server
+GRAPHQL_PLAYGROUND_PORT=3002 GRAPHQL_PLAYGROUND_ENDPOINT=https://your.host/graphql graphql-playground-server
 ```
 
 

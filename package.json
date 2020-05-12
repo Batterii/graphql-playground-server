@@ -1,7 +1,7 @@
 {
 	"name": "graphql-playground-server",
 	"version": "0.1.1",
-	"description": "Standaline GraphQL Playground server",
+	"description": "Standalone GraphQL Playground server",
 	"author": "Batterii, LLC",
 	"license": "MIT",
 	"repository": "github:Batterii/graphql-api-server",
