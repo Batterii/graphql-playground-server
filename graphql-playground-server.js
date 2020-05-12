@@ -18,7 +18,15 @@ program.parse(process.argv);
 let config;
 if (program.config) {
 	const configPath = resolvePath(process.cwd(), program.config);
-	config = parseYaml(readFileSync(configPath, 'utf8'));
+	let configText;
+	try {
+		configText = readFileSync(configPath, 'utf8');
+		console.log(`Config loaded from ${configPath}`);
+	} catch (err) {
+		if (err.code !== 'ENOENT') throw err;
+		console.log(`Config file not found: ${configPath}`);
+	}
+	config = configText ? parseYaml(configText) : {};
 } else {
 	config = {};
 }
