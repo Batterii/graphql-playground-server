@@ -46,7 +46,7 @@ one, so as far as releasing this as an easily-installed package goes, this is
 kind of the best I can do for now. If there are any Debian packaging gurus out
 there who might like to lend a hand, feel free.
 
-Starting with v0.1.5, you can find a `deb` package under Assets for each release
+Starting with v0.1.6, you can find a `deb` package under Assets for each release
 in the Releases tab. Find the latest one and download it to your machine, along
 with the associated `pubkey.gpg`.
 
@@ -70,7 +70,7 @@ added this key your keychan, the `gpg` tool will let you know. Once you have it
 in place, you can check the package's signature like so:
 
 ```
-dpkg-sig --verify ~/Downloads/graphql-playground-server_0.1.4_all.deb
+dpkg-sig --verify ~/Downloads/graphql-playground-server_0.1.6_all.deb
 ```
 
 This command will print, among other things, `GOODSIG _gpgoriginl` into your
@@ -85,7 +85,7 @@ be some kind of arcane art and I'm not in a position to learn it right now.
 Once you've verified the signature, you can safely install like so:
 
 ```
-sudo apt install ~/Downloads/graphql-playground-server_0.1.4_all.deb
+sudo apt install ~/Downloads/graphql-playground-server_0.1.6_all.deb
 ```
 
 You'll of course want to change the version number in that filename to match the
