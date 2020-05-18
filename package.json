@@ -4,7 +4,7 @@
 	"description": "Standalone GraphQL Playground server",
 	"author": "Batterii, LLC",
 	"license": "MIT",
-	"repository": "github:Batterii/graphql-api-server",
+	"repository": "github:Batterii/graphql-playground-server",
 	"files": [
 		"graphql-playground-server.js"
 	],
