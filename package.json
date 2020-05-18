@@ -11,10 +11,21 @@
 	"bin": {
 		"graphql-playground-server": "graphql-playground-server.js"
 	},
+	"scripts": {
+		"deb": "node-deb --install-strategy copy -- graphql-playground-server.js"
+	},
 	"dependencies": {
 		"commander": "^5.1.0",
 		"graphql-playground-middleware-koa": "^1.6.13",
 		"koa": "^2.11.0",
 		"yaml": "^1.9.2"
+	},
+	"devDependencies": {
+		"node-deb": "^0.10.7"
+	},
+	"node_deb": {
+		"entrypoints": {
+			"daemon": "graphql-playground-server.js -c /etc/graphql-playground-server/graphql-playground-server.conf.yaml"
+		}
 	}
 }
